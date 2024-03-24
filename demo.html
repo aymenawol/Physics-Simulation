@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Simulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="demo.css">
+
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="game-title">
+            <h1>Physics Simulation</h1>
+        </div>
+        <div class="game-description">
+            <p>This is a demo to visualize position, velocity, and acceleration. Drag values and press start to begin
+                the simulation.</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="grid-container">
+                    <div class="ball"></div>
+                </div>
+                <div class="number-line">
+                    <span style="left: 0;">0m</span>
+                    <span style="left: 24.3%;">25m</span>
+                    <span style="left: 49.3%;">50m</span>
+                    <span style="right: 23.9%;">75m</span>
+                    <span style="right: 0;">100m</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <div class="slider-container">
+                    <div class="textbox-container">
+                        <label for="position-input" class="textbox-label" data-bs-toggle="tooltip"
+                            title="Position represents the current location of the object.">Position:</label>
+                        <input type="number" class="form-control textbox-input" id="position-input" value="50" min="0"
+                            max="100">
+                        <span class="unit">m</span>
+                    </div>
+                    <input type="range" class="form-range" min="0" max="100" value="50" id="position-slider">
+                </div>
+                <div class="slider-container">
+                    <div class="textbox-container">
+                        <label for="velocity-input" class="textbox-label" data-bs-toggle="tooltip"
+                            title="Velocity represents the rate of change of position with respect to time.">Velocity:</label>
+                        <input type="number" class="form-control textbox-input" id="velocity-input" value="0" min="-50"
+                            max="50">
+                        <span class="unit">m/s</span>
+                    </div>
+                    <input type="range" class="form-range" min="-50" max="50" value="0" id="velocity-slider">
+
+                </div>
+                <div class="slider-container">
+                    <div class="textbox-container">
+                        <label for="acceleration-input" class="textbox-label" data-bs-toggle="tooltip"
+                            title="Acceleration represents the rate of change of velocity with respect to time.">Acceleration:</label>
+                        <input type="number" class="form-control textbox-input" id="acceleration-input" value="0" min="-10"
+                            max="10">
+                        <span class="unit">m/s<sup>2</sup></span>
+                    </div>
+                    <input type="range" class="form-range" min="-10" max="10" value="0" id="acceleration-slider">
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <button class="btn btn-primary" id="startBtn">Start</button>
+                <button class="btn btn-danger" id="stopBtn">Stop</button>
+                <button class="btn btn-warning" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dark-mode-switch">
+        <div class="text-end me-3 mt-3">
+            <label class="switch">
+                <input type="checkbox" id="darkModeSwitch">
+                <span class="slider round"></span>
+            </label>
+            <span class="ms-2">Dark Mode</span>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="demo.js"></script>
+</body>
+
+</html>
