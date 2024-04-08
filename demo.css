@@ -1,5 +1,5 @@
 .container {
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -199,7 +199,16 @@ body.dark-mode {
     color: #ffffff;
 }
 
+.hidden {
+    display: none;
+}
 
-.btn {
-    margin: 5px;
+.dark-mode .x-label,
+.dark-mode .y-label {
+    fill: #ffffff; /* Change fill color to white */
+}
+
+.dark-mode .x-axis text,
+.dark-mode .y-axis text {
+    fill: #ffffff; /* Change fill color to white */
 }
