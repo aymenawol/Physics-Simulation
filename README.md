@@ -1,4 +1,4 @@
 # Physics-Simulation
-A simulation to visualize position, velocity, and acceleration. Made for SkillsUSA Job Skills Demonstration A Competition
+A simulation to visualize position, velocity, and acceleration.
 
 See here: https://physicsdemo.netlify.app
